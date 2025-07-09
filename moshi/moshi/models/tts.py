@@ -565,6 +565,7 @@ class TTSModel:
         from a HuggingFace repository. To retrieve a voice from another repo, you can also use
         the `hf://REPO/PATH` syntax.
         """
+        print(f"get this: {voice_name + self.voice_suffix}")
         file = loaders.hf_get(voice_name + self.voice_suffix, self.voice_repo,
                               check_local_file_exists=True)
         return Path(file)

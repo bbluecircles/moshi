@@ -123,6 +123,7 @@ def hf_get(filename: str | Path, hf_repo: str | None = None,
     elif filename.startswith("file://"):
         # Provide a way to force the read of a local file.
         filename = filename.removeprefix("file://")
+        print(filename)
         return Path(filename)
     elif hf_repo is not None:
         if check_local_file_exists:
